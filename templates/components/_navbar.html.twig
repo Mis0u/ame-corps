@@ -1,0 +1,43 @@
+{% set route = app.request.attributes.get('_route') %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="{{path('app_home')}}"><img src="{{asset('build/images/logo-massage.png')}}" alt=""></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarColor03" data-hover="dropdown">
+    <ul class="navbar-nav justify-content-end w-100">
+      <li class="nav-item  {{ addClass( route,'app_home' ) }} ">
+        <a class="nav-link" href="{{path('app_home')}}">Accueil <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item {{ addClass( route,'app_actualities' ) }}">
+        <a class="nav-link" href="{{path('app_actualities')}}">Actualités</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle not-active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sensitiv "votre produit"</a>
+        <div class="dropdown-menu" style="position: absolute; transform: translate3d(0px, 40px, 0px); top: 0px; left: 0px; will-change: transform;" x-placement="bottom-start">
+            <a class="dropdown-item not-active" href="{{path('app_definition')}}">Définition</a>
+            <a class="dropdown-item not-active" href="{{path('app_operation')}}">Déroulement d'une séance</a>
+            <a class="dropdown-item not-active" href="{{path('app_well_done')}}">Bienfaits</a>
+        </div>
+      </li>
+      <li class="nav-item {{ addClass( route,'app_price' ) }}">
+        <a class="nav-link" href="{{path('app_price')}}">Horaires et tarifs</a>
+      </li>
+      <li class="nav-item {{ addClass( route,'app_testimony' ) }}">
+        <a class="nav-link" href="{{path('app_testimony')}}">Témoignages</a>
+      </li>
+      <li class="nav-item {{ addClass( route,'app_ethic' ) }}">
+        <a class="nav-link" href="{{path('app_ethic')}}">Éthique</a>
+      </li>
+      <li class="nav-item {{ addClass( route,'app_contact' ) }}">
+        <a class="nav-link" href="{{path('app_contact')}}">Contact</a>
+      </li>
+      {% if app.user %}
+        <li class="nav-item">
+          <a href="{{ path('app_admin') }}" class="nav-link btn-admin">Admin</a>
+        </li>
+      {% endif %}
+    </ul>
+  </div>
+</nav>

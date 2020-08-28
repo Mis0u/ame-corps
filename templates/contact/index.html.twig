@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+{% block classBody %}contact article-index{% endblock %}
+
+{% block body %}
+    {% include "components/_slider.html.twig" %}
+    <main>
+        <section class='article'>
+            <article>
+                <h1>{{article.title}}</h1>
+
+                <div class="content">
+                    {{article.content|raw}}
+                </div>
+            </article>
+        </section>
+
+
+        <section class="comment-form">
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <button class="btn w-100">Envoyer <i class="fas fa-envelope"></i></button>
+            {{ form_end(form) }}
+        </section>
+
+    </main>
+{% endblock %}

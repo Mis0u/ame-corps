@@ -1,0 +1,42 @@
+@media screen and (max-width: 480px) {
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    //HOME
+
+    .home {
+        .carousel {
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+
+    //ACTUALITES
+
+    .actualities {
+        h5.card-title {
+            font-size: 1rem;
+        }
+    }
+
+    //ARTICLE
+
+    .article-index {
+        main h3 {
+            font-size: 1.3rem;
+        }
+    }
+
+    //LOGIN
+
+    .security {
+        form {
+            h1 {
+                letter-spacing: 1px;
+                font-size: 1rem;
+            }
+        }
+    }
+}

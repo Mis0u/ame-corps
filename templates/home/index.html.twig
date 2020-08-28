@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ame Corps{% endblock %}
+{% block classBody %}home{% endblock %}
+{% block body %}
+    {% include "components/_carousel.html.twig" %}
+
+    <div class="title-homepage d-flex justify-content-center divider">
+        <span></span><h2>{{article.title}}</h2><span></span>
+    </div>
+    <div class="blockpage d-flex">
+        <div class="img-content">
+            <img src="{{asset('build/images/massage-accueil.jpg')}}" alt="">
+        </div>
+        <div class="presentation">
+            <div class="content">
+                {{ article.content|raw }}
+            </div>
+        </div>
+    </div>
+
+    <div class="shortcut-product d-flex justify-content-center flex-column">
+        <h2 class="text-center">Sensitive "Votre produit"</h2>
+        <div class="content-shortcut d-flex justify-content-center">
+            <figure class="d-flex justify-content-center">
+                <a href="{{path('app_definition')}}"></a>
+                <img src="{{ asset('build/images/pierre.jpg') }}" alt="">
+                    <figcaption>
+                        <h3>Description</h3>    
+                    </figcaption>
+            </figure>
+            <figure class="d-flex justify-content-center">
+                <a href="{{path('app_operation')}}"></a>
+                <img src="{{ asset('build/images/massage.jpg') }}" alt="">
+                    <figcaption>
+                        <h3>Déroulement</h3>
+                    </figcaption>
+            </figure>
+            <figure class="d-flex justify-content-center">
+                <a href="{{path('app_well_done')}}"></a>
+                <img src="{{ asset('build/images/huile.jpg') }}" alt="">
+                    <figcaption>
+                        <h3>Bienfait</h3>
+                    </figcaption>
+            </figure>
+        </div>
+    </div>
+
+    <section class="end-page d-flex justify-content-around align-items-center flex-column">
+        <h3>Découvrez les témoignages de nos clients</h3>
+<a href="{{path('app_testimony')}}" class="btn">Découvrir</i>
+</a>
+
+    </section>
+{% endblock %}
+

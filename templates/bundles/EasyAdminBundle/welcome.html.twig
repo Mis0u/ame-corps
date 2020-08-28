@@ -1,0 +1,33 @@
+{% extends '@EasyAdmin/page/content.html.twig' %}
+
+    {% block head_stylesheets %}
+        {{ parent() }}
+        {{ encore_entry_link_tags('admin') }}
+    {% endblock %}
+
+{% block page_title 'Bienvenue sur votre espace' %} {# Le titre en h1 sera Vos statistiques, je l'ai directement modifié sur le content.html.twig #}
+
+
+
+{% block page_content %}
+<section class="stats">
+    <article  class="stats-actu">
+        <div>
+            <h2>Nombre d'actualités publiées</h2>
+            <p><span>{{ total_actualities }}</span></p>
+        </div>
+    </article>
+    <article  class="stats-actu-comments">
+        <div>
+            <h2>Nombre de commentaires publiées</h2>
+            <p><span>{{ total_comments_actu }}</span></p>
+        </div>
+    </article>
+    <article class="stats-testimonies">
+        <div>
+            <h2>Nombre de témoignages publiées</h2>
+            <p><span>{{ total_testimonies }}</span></p>
+        </div>
+    </article>
+</section>
+{% endblock %}

@@ -1,0 +1,7 @@
+@import "../utilities/mixin.scss";
+
+.contact {
+    .slide {
+        @include setSlider('../../images/slider-contact.jpg')
+    }
+}

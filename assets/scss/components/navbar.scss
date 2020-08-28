@@ -1,0 +1,82 @@
+@import "../utilities/variables.scss";
+
+.navbar.bg-light {
+  width: calc(100% - #{$body-padding});
+  position: fixed;
+  top: -100px;
+  z-index: 999;
+  transition: $basic-transition;
+  height: 70px;
+
+  img {
+    filter: invert(60%) sepia(62%) saturate(1451%) hue-rotate(295deg) brightness(113%) contrast(95%);
+    max-width: 100%;
+    height: 100px;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block !important;
+  }
+
+  .dropdown-menu {
+    top: -6px !important;
+  }
+
+  &.active {
+    top: 0;
+  }
+
+  li.nav-item {
+    a {
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-size: 13px;
+      position: relative;
+
+      &:not(.not-active) {
+        margin: 0 10px;
+      }
+
+      &:hover {
+        color: #212121;
+      }
+
+      &.dropdown-item:hover {
+        background-color: $blue-opacity;
+      }
+
+      &.btn-admin {
+        background-color: $pink;
+      }
+
+      &:not(.not-active):before {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        right: 0;
+        height: 2px;
+        width: 0;
+        background-color: $pink;
+        transition: $basic-transition;
+      }
+
+      &:hover:before {
+        width: 100%;
+        right: unset;
+        left: 0;
+      }
+    }
+
+    &.active a:before {
+      position: absolute;
+      content: '';
+      bottom: 0;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: $pink;
+    }
+
+  }
+
+}

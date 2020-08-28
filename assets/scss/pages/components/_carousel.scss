@@ -1,0 +1,54 @@
+ .carousel {
+     height: $full-screen;
+     overflow: hidden;
+     position: relative;
+
+     .over-text {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         width: 50%;
+         height: 50%;
+         z-index: 2;
+         transform: translate(-50%, -50%);
+
+         h1 {
+             filter: drop-shadow(2px 4px 6px #000);
+             background: $linearGradient;
+             -webkit-background-clip: text;
+             -webkit-text-fill-color: transparent;
+             font-weight: 700;
+         }
+
+         p {
+             filter: drop-shadow(2px 4px 6px #000);
+             letter-spacing: 2px;
+             font-weight: 700;
+             color: #fff;
+         }
+     }
+
+     .carousel-control-next {
+         margin-right: 40px;
+     }
+
+     .carousel-control-prev {
+         margin-left: 40px;
+     }
+
+
+     .carousel-control-prev,
+     .carousel-control-next {
+         top: 50%;
+         transform: translateY(-50%);
+         width: 40px;
+         height: 40px;
+         background-color: $pink;
+         border-radius: 100%;
+     }
+
+     img {
+         height: auto;
+     }
+
+ }

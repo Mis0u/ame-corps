@@ -1,0 +1,26 @@
+@media screen and (max-width: 1024px) {
+    .navbar.bg-light li.nav-item a:not(.not-active) {
+        margin: 0;
+    }
+
+    .navbar.bg-light li.nav-item a {
+        font-size: 10px;
+    }
+
+    //HOME
+    .home .presentation p {
+        font-size: 15px;
+    }
+
+    // ARTICLE
+
+    .article-index h1 {
+        font-size: 2rem;
+    }
+
+    //FOOTER
+
+    footer h3 {
+        font-size: 18px;
+    }
+}

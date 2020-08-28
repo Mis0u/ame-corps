@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Actualités{% endblock %}
+{% block classBody %}actualities{% endblock %}
+{% block body %}
+    {% include "components/_slider.html.twig" %}
+    <main>
+        <h2>Nos dernières actualités</h2>
+        <div class="d-flex flex-wrap justify-content-center">
+            {% for actuality in all_actuality %}
+                <div class="card-container">
+                    <div class="image-actuality-content">
+                        <img class="card-img-content" src="{{ vich_uploader_asset(actuality, 'imageFile')|imagine_filter('actuality_thumb')}}" alt="Card image cap">
+                        <p class="card-text">Publié <time>{{ actuality.createdAt|ago }}</time></p>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{{ actuality.title }}</h5>
+                        
+                    </div>
+                    <div class="btn-content d-flex justify-content-center">
+                        <a href="{{path('app_actuality', {'slug': actuality.slug})}}">Lire</a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </main>
+{% endblock %}

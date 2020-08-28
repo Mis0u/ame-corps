@@ -1,0 +1,47 @@
+@import "../utilities/variables.scss";
+
+body{
+    padding: 20px;
+
+
+    h1,
+    h2 {
+        letter-spacing: 5px;
+        text-transform: uppercase;
+        color: $pink;
+        font-weight: 400;
+    }
+
+    h2{
+        text-align: center;
+        margin: 50px 0;
+    }
+
+    a,
+    a:hover {
+        text-decoration: none;
+    }
+
+    p,
+    a,
+    span,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    small {
+        font-family: 'Lato', sans-serif;
+    }
+
+    ::-moz-selection {
+        background: $blue;
+        color: #fff;
+    }
+
+    ::selection {
+        background: $blue;
+        color: #fff;
+    }
+}

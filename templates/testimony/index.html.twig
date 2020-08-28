@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Témoignages{% endblock %}
+{% block classBody %}testimonies article-index{% endblock %}
+{% block body %}
+    {% include "components/_slider.html.twig"%}
+    <main>
+        <section class="article">
+            <h1>Témoignages</h1>
+            <p class="total"><small>À ce jour {{ total_testimonies }} témoignages ont été publié</small></p>
+        </section>
+        {% for testimony in testimonies %}
+                <section class="comment">
+                    <p class="pl-4 name"><span>{{testimony.name|capitalize}} a dit :</span></p>
+                    <div class="pl-4">{{testimony.content|raw}}</div>
+                    <p class="pl-4"><small> {{testimony.createdAt|ago}}</small></p>
+                </section>
+        {% endfor %}
+        <section class="comment-form">
+        <h3>Écrire un témoignage :</h3>
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <button class="btn w-100">Envoyer <i class="far fa-comment"></i></button>
+            {{ form_end(form) }}
+        </section>
+    </main>
+{% endblock %}

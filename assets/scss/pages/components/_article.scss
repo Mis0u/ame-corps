@@ -1,0 +1,82 @@
+@import "../../utilities/variables.scss";
+
+main {
+    width: 70%;
+    margin: auto;
+
+    section.article {
+        margin-top: 50px;
+
+        h1 {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        p {
+            line-height: 30px;
+        }
+    }
+
+    .name {
+        padding-top: 20px;
+
+        span {
+            padding: 5px;
+            color: white;
+            background-color: $pink;
+        }
+
+
+    }
+
+
+    .comment {
+        .name span {
+            background-color: $pink;
+            border-radius: 5px;
+        }
+
+        small {
+            color: $blue;
+            font-weight: 700;
+        }
+    }
+
+    .comment-form {
+        margin-top: 50px;
+
+        button {
+            color: $pink;
+            border: 1px solid $pink;
+            z-index: 0;
+            position: relative;
+            transition: $basic-transition;
+            overflow: hidden;
+
+            &:hover {
+                color: #fff;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                height: 100%;
+                width: 0;
+                transition: $basic-transition;
+                z-index: -1;
+                background-color: $pink;
+            }
+
+            &:hover:before {
+                right: unset;
+                left: 0;
+                width: 100%;
+
+            }
+        }
+
+
+    }
+}

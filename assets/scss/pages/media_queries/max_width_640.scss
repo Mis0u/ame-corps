@@ -1,0 +1,61 @@
+@media screen and (max-width: 640px) {
+  h2 {
+    font-size: 1.7rem;
+  }
+
+  //HOME
+
+  .home {
+    .carousel {
+      h1 {
+        font-size: 2rem;
+      }
+
+      p {
+        letter-spacing: 0 !important;
+      }
+    }
+
+    section.end-page h3 {
+      font-size: 1.5rem;
+    }
+  }
+
+  //ACTUALITY
+
+  .actualities {
+    .card-container {
+      img {
+        max-width: 100%;
+      }
+
+      h5 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  //ARTICLE
+  .article-index {
+
+    main section.article h1,
+    main section.article h2,
+    main section.article h3 {
+      font-size: 1.5rem;
+      line-height: 40px;
+    }
+  }
+
+  //LOGIN
+
+  .security {
+    form {
+      padding: 20px;
+
+      h1 {
+        font-size: 1.3rem;
+      }
+    }
+  }
+
+}

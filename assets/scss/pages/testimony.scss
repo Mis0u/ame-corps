@@ -1,0 +1,16 @@
+@import "../utilities/mixin.scss";
+
+.testimonies {
+    .slide {
+        @include setSlider('../../images/slider-testimony.jpg')
+    }
+
+    h1 {
+        text-align: center;
+        margin: 50px 0;
+    }
+
+    p.total {
+        text-align: center;
+    }
+}

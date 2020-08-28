@@ -1,0 +1,82 @@
+@import '../utilities/variables.scss';
+@import '../utilities/mixin.scss';
+
+.actualities {
+    .slide {
+        @include setSlider('../../images/slider-actuality.jpg')
+    }
+
+    .card-container {
+        width: calc(#{$container-width} + #{$container-padding});
+        margin: 10px;
+        position: relative;
+        box-shadow: 0 0 7px rgba(0, 0, 0, 0.44);
+        padding: 1.25rem;
+
+        .image-actuality-content {
+            position: relative;
+
+            p {
+                position: absolute;
+                bottom: 0;
+                left: 10px;
+                color: #fff;
+                font-weight: 700;
+            }
+
+        }
+
+        .card-body {
+            padding: 0;
+
+            h5 {
+                text-align: center;
+                margin-top: 20px;
+                color: #212121;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+            }
+        }
+
+        .btn-content {
+
+            margin-top: 30px;
+
+            a {
+                color: $pink;
+                width: 13%;
+                text-align: center;
+                padding: 4px 0;
+                border: 1px solid $pink;
+                transition: 0.2s ease-in-out;
+                position: relative;
+                z-index: 0;
+                font-weight: 700;
+                letter-spacing: 2px;
+
+                &:before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    height: 100%;
+                    width: 0;
+                    background-color: $pink;
+                    transition: $basic-transition;
+                    z-index: -1;
+                }
+
+                &:hover:before {
+                    width: 100%;
+                    right: unset;
+                    left: 0;
+                }
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+
+    }
+}

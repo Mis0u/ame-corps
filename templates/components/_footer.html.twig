@@ -1,0 +1,25 @@
+{% set data = last_actu()  %}
+
+<div class="grid-content">
+    <div class="logo">
+        <a class="footer-brand" href="{{path('app_home')}}"><img src="{{asset('build/images/logo-massage.png')}}" alt=""></a>
+    </div>
+    <div class="contact d-flex flex-column justify-content-start align-items-start">
+        <h3>Contact</h3>
+        <p><i class="fas fa-map-marker-alt"></i> Votre adresse</p>
+        <p><i class="fas fa-phone-alt"></i> 06 06 06 06 06</p>
+        <p><a href="mailto:votremail@gmail.com"> <i class="fas fa-envelope"></i> votremail@gmail.com</a></p>
+    </div>
+
+    <div class="lastActu d-flex flex-column justify-content-start align-items-start">
+        <h3>Nos dernières actualités</h3>
+        {% for actu in data %}
+            <p><a href="{{ path('app_actuality', {'slug': actu.slug}) }}"><i class="fas fa-external-link-alt"></i> {{ actu.title }}</a> <br> <small><i>{{ actu.createdAt|ago() }}</i></small></p>
+        {% endfor %}
+    </div>
+
+    <div class="social d-flex justify-content-center align-items-center w-100">
+        <p>Suivez nous sur : <a href="https://www.facebook.com/lespritcorpsmassage" target="_blank"><i class="fab fa-facebook"></i></a></p>
+    </div>
+  
+</div>

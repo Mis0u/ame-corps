@@ -1,0 +1,11 @@
+@mixin setSlider($path) {
+    overflow: hidden;
+    background-image: url($path);
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+
+    img {
+        max-width: 100%;
+    }
+}

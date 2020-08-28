@@ -1,12 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="{{asset('build/images/logo-massage.png')}}" />
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
     </head>
-    <body>
+    <body class="{% block classBody %}{% endblock %}">
+        {% set route = app.request.attributes.get('_route') %}
+        {% include "components/_navbar.html.twig" %}
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+
+        {% if route != 'app_login' and route != "app_change_password" %}
+            <footer {% if route != 'app_home' %} class="mt-5" {% endif %}>
+            {% include "components/_footer.html.twig" %}
+            </footer>
+        {% endif %}
+      
+
+        {% block javascripts %}
+             {{ encore_entry_script_tags('app') }}
+        {% endblock %}
     </body>
 </html>

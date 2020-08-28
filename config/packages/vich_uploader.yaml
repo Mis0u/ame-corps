@@ -1,0 +1,11 @@
+vich_uploader:
+    db_driver: orm
+    mappings:
+        actuality_uploads:
+            uri_prefix: /uploads/vich/actuality
+            upload_destination: "%kernel.project_dir%/public/uploads/vich/actuality"
+            namer: Vich\UploaderBundle\Naming\UniqidNamer
+        caroussel_uploads:
+            uri_prefix: /uploads/vich/caroussel
+            upload_destination: "%kernel.project_dir%/public/uploads/vich/caroussel"
+            namer: Vich\UploaderBundle\Naming\UniqidNamer

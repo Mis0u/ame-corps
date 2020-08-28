@@ -1,0 +1,5 @@
+easy_admin:
+  entities:
+    - App\Entity\Actuality
+    - App\Entity\Homepage
+    - App\Entity\ActualityComment

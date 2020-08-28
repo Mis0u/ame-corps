@@ -1,0 +1,70 @@
+.security {
+  padding: 0;
+
+  .form-control:focus {
+    border-color: $pink;
+    box-shadow: $pink-opacity;
+  }
+
+  div.content-form {
+    height: 100vh;
+  }
+
+  div.id-user,
+  div.pass-user {
+    position: relative;
+
+    &:hover i.fas {
+      color: $pink;
+    }
+  }
+
+  input {
+    margin-bottom: 20px;
+    padding-left: 40px;
+  }
+
+  i.fas {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 15px;
+    color: $blue;
+    transition: $basic-transition;
+  }
+
+  button {
+    color: $pink;
+    border: 1px solid $pink;
+    z-index: 0;
+    position: relative;
+    transition: $basic-transition;
+    overflow: hidden;
+
+    &:hover {
+      color: #fff;
+    }
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: 0;
+      transition: $basic-transition;
+      z-index: -1;
+      background-color: $pink;
+    }
+
+    &:hover:before {
+      right: unset;
+      left: 0;
+      width: 100%;
+    }
+
+    i {
+      margin: 0 4px;
+    }
+  }
+}

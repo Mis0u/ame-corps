@@ -1,0 +1,7 @@
+@import "../../utilities/mixin.scss";
+
+.well-done {
+    .slide {
+        @include setSlider('../../images/slider-well-done.jpg')
+    }
+}

@@ -1,0 +1,7 @@
+@import "../utilities/mixin.scss";
+
+.ethic {
+    .slide {
+        @include setSlider('../../images/slider-ethic.jpg')
+    }
+}

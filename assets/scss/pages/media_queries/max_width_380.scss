@@ -1,0 +1,55 @@
+@media screen and (max-width: 380px) {
+    //HOME
+
+    .home {
+        .carousel {
+            h1 {
+                font-size: 1rem;
+            }
+
+            p {
+                font-size: 0.9rem;
+            }
+        }
+
+        .content {
+            p {
+                line-height: 13px;
+                font-size: 0.9rem;
+                text-align: left;
+            }
+        }
+
+        section.end-page h3 {
+            font-size: 1rem;
+            text-align: center;
+        }
+    }
+
+    //ACTUALITES
+
+    .actualities {
+        .card-container {
+
+            padding: 10px;
+
+            .btn-content a {
+                width: 25%;
+            }
+
+            h5 {
+                font-size: 0.8rem;
+            }
+        }
+    }
+
+    //ARTICLE
+
+    .article-index {
+        main section.article h1 {
+            font-size: 1rem;
+            line-height: 30px;
+            margin-bottom: 20px;
+        }
+    }
+}

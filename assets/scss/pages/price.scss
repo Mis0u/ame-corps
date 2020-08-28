@@ -1,0 +1,7 @@
+@import "../utilities/mixin.scss";
+
+.price {
+    .slide {
+        @include setSlider('../../images/slider-price.jpg')
+    }
+}

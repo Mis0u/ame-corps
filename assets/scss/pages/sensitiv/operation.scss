@@ -1,0 +1,7 @@
+@import "../../utilities/mixin.scss";
+
+.operation {
+    .slide {
+        @include setSlider('../../images/slider-deroulement.jpg')
+    }
+}

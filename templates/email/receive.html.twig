@@ -1,0 +1,18 @@
+{% apply inky_to_html %}
+    <container>
+        <row class="header">
+            <columns> 
+                <h1>Bonjour {{ email.toName }}</h1> 
+                <p>Vous avez reçu un message de la part de {{ destinataire }} </p>
+            </columns>
+        </row>
+
+        <row class="content">
+            <columns>
+                <div class="message">
+                    {{ message|raw }}
+                </div>
+            </columns>
+        </row>
+    </container>
+{% endapply %}

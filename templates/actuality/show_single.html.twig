@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+{% block title %}{% endblock %}
+{% block classBody %}actuality article-index{% endblock %}
+
+{% block body %}
+<div class="slider-actuality" style="background-image:url('{{ vich_uploader_asset(actuality, 'imageFile') }}'); background-position:center;background-size:cover;height:400px"></div>
+    <main>
+        <section class='article'>
+            <article>
+                <h1>{{actuality.title}}</h1>
+
+                <div class="content">
+                    {{actuality.content|raw}}
+                </div>
+                <hr>
+            </article>
+        </section>
+        
+        
+           {% if actuality.actualityComments|length > 0 %}
+           <h3>Vos commentaires :</h3>
+                {% for comment in comments %}
+                <section class="comment">
+                    <p class="pl-4 name"><span>{{comment.name|capitalize}} a dit :</span></p>
+                    <div class="pl-4">{{comment.content|raw}}</div>
+                    <p class="pl-4"><small> {{comment.createdAt|ago}}</small></p>
+                </section>
+                {% endfor %}
+            
+           {% endif %}
+        
+
+        <section class="comment-form">
+        <h3>Écrire un commentaire :</h3>
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <button class="w-100 btn">Envoyer <i class="far fa-paper-plane"></i></button>
+            {{ form_end(form) }}
+        </section>    
+    </main>
+{% endblock %}
