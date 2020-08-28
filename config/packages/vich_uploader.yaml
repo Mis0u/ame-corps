@@ -4,6 +4,8 @@ vich_uploader:
         actuality_uploads:
             uri_prefix: /uploads/vich/actuality
             upload_destination: "%kernel.project_dir%/public/uploads/vich/actuality"
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
         caroussel_uploads:
             uri_prefix: /uploads/vich/caroussel
             upload_destination: "%kernel.project_dir%/public/uploads/vich/caroussel"
+            namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
