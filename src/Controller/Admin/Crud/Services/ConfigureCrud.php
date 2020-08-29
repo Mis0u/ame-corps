@@ -21,7 +21,11 @@ class ConfigureCrud
             ->setPageTitle('index', $index)
             ->setPageTitle('edit', $edit)
             ->setPageTitle('new', $new)
-            ->addFormTheme("@FOSCKEditor/Form/ckeditor_widget.html.twig");
+            ->addFormTheme("@FOSCKEditor/Form/ckeditor_widget.html.twig")
+            ->setFormOptions(
+                ['validation_groups' => ['new']],
+                ['validation_groups' => []]
+            );
     }
 
     public function setSimpleCrud()
