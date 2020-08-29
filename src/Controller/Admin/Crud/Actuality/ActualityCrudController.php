@@ -39,7 +39,7 @@ class ActualityCrudController extends AbstractCrudController
         $association = AssociationField::new('actualityComments', 'Commentaires')->hideOnForm();
 
         if (CRUD::PAGE_INDEX === $pageName || CRUD::PAGE_DETAIL === $pageName) {
-            return [$id, $title, $image, $content, $date, $association];
+            return [$id, $title, $imageField, $content, $date, $association];
         } elseif (CRUD::PAGE_NEW === $pageName) {
             return [$id, $title, $imageField->setRequired(true), $content, $date, $association];
         } else {
