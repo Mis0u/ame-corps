@@ -1,12 +1,6 @@
 liip_imagine:
-  driver: "gd"
   filter_sets:
     actuality_thumb:
       quality: 75
       filters:
         thumbnail: { size: [665, 180], mode: outbound }
-    elfinder_thumbnail:
-      data_loader: cmf_media_doctrine_phpcr
-      quality: 75
-      filters:
-        thumbnail: { size: [100, 100], mode: inset }
