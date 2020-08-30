@@ -54,17 +54,10 @@ Encore
     config.corejs = 3;
   })
 
-  .copyFiles([{
+  .copyFiles([
+    {
       from: "./assets/images",
       to: "images/[path][name].[hash:8].[ext]",
-    },
-    {
-      from: "./assets/uploads/vich/actuality",
-      to: "uploads/vich/actuality/[path][name].[hash:8].[ext]",
-    },
-    {
-      from: "./assets/uploads/vich/carousel",
-      to: "uploads/vich/carousel//[path][name].[hash:8].[ext]",
     },
     {
       from: "./node_modules/ckeditor/",
