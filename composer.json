@@ -105,7 +105,8 @@
     ],
     "compile": [
       "php bin/console doctrine:migrations:migrate --no-interaction",
-      "chmod -R 777 var/log/"
+      "chmod -R 777 var/log/",
+      "chmod -R 777 public/uploads/vich/actuality"
     ]
   },
   "conflict": {
