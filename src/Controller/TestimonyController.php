@@ -13,7 +13,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class TestimonyController extends AbstractController
 {
     /**
-     * @Route("/témoignages", name="app_testimony")
+     * @Route("/temoignages", name="app_testimony")
      */
     public function displayTestimonies(Request $request, EntityManagerInterface $manager, TestimonyRepository $repo)
     {

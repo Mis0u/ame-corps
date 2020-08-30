@@ -22,13 +22,12 @@ class CarousselCrudController extends AbstractCrudController
     public function configureFields(string $pageName): iterable
     {
 
-            $id = IdField::new('id')->hideOnForm();
-            $imageField = ImageField::new('imageFile', 'Image')->setFormType(VichImageType::class)->setHelp("Format jpeg et png <br> Poids Max ~ 500Ko")->setRequired(true);
-            $image =  ImageField::new('image', 'Image')->setBasePath('uploads/vich/caroussel');
-            $date = DateTimeField::new('updatedAt', 'Ajouté le ')->hideOnForm();
+        $id = IdField::new('id')->hideOnForm();
+        $imageField = ImageField::new('imageFile', 'Image')->setFormType(VichImageType::class)->setHelp("Format jpeg et png <br> Poids Max ~ 500Ko")->setRequired(true);
+        $image =  ImageField::new('image', 'Image')->setBasePath("uploads/vich/carousel");
+        $date = DateTimeField::new('updatedAt', 'Ajouté le ')->hideOnForm();
 
-            return CRUD::PAGE_INDEX === $pageName || CRUD::PAGE_DETAIL === $pageName ? [$id, $image, $date] : [$id, $imageField, $date];
-
+        return CRUD::PAGE_INDEX === $pageName || CRUD::PAGE_DETAIL === $pageName ? [$id, $image, $date] : [$id, $imageField, $date];
     }
 
     public function configureCrud(Crud $crud): Crud
@@ -58,5 +57,4 @@ class CarousselCrudController extends AbstractCrudController
                 return $action->setIcon('fa fa-trash')->setLabel(false);
             });
     }
-    
 }

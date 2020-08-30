@@ -2,10 +2,10 @@ vich_uploader:
     db_driver: orm
     mappings:
         actuality_uploads:
-            uri_prefix: "%app.path.actuality_images%"
-            upload_destination: "%kernel.project_dir%/public%app.path.actuality_images%"
+            uri_prefix: "/uploads/vich/actuality"
+            upload_destination: "%kernel.project_dir%/public/uploads/vich/actuality"
             namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
         caroussel_uploads:
-            uri_prefix: "%app.path.carousel_images%"
-            upload_destination: "%kernel.project_dir%/public%app.path.carousel_images%"
+            uri_prefix: "/uploads/vich/carousel"
+            upload_destination: "%kernel.project_dir%/public/uploads/vich/carousel"
             namer: Vich\UploaderBundle\Naming\SmartUniqueNamer
