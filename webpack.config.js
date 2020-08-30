@@ -59,6 +59,14 @@ Encore
       to: "images/[path][name].[hash:8].[ext]",
     },
     {
+      from: "./assets/uploads/vich/actuality",
+      to: "uploads/vich/actuality/[path][name].[hash:8].[ext]",
+    },
+    {
+      from: "./assets/uploads/vich/carousel",
+      to: "uploads/vich/carousel//[path][name].[hash:8].[ext]",
+    },
+    {
       from: "./node_modules/ckeditor/",
       to: "ckeditor/[path][name].[ext]",
       pattern: /\.(js|css)$/,
