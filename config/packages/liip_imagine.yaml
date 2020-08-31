@@ -1,6 +1,0 @@
-liip_imagine:
-  filter_sets:
-    actuality_thumb:
-      quality: 75
-      filters:
-        thumbnail: { size: [665, 180], mode: outbound }
