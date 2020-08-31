@@ -25,7 +25,7 @@ class CarousselCrudController extends AbstractCrudController
         $id = IdField::new('id')->hideOnForm();
         $imageField = ImageField::new('imageFile', 'Image')->setFormType(VichImageType::class)->setHelp("Format jpeg et png <br> Poids Max ~ 500Ko")->setRequired(true);
         $image =  ImageField::new('image', 'Image')->setBasePath("uploads/vich/carousel");
-        $date = DateTimeField::new('updatedAt', 'Ajouté le ')->hideOnForm();
+        $date = DateTimeField::new('updatedAt', 'Ajoufté le ')->hideOnForm();
 
         return CRUD::PAGE_INDEX === $pageName || CRUD::PAGE_DETAIL === $pageName ? [$id, $image, $date] : [$id, $imageField, $date];
     }
@@ -33,6 +33,7 @@ class CarousselCrudController extends AbstractCrudController
     public function configureCrud(Crud $crud): Crud
     {
         return $crud
+            ->setDateTimeFormat('dd' . ' ' . 'MMMM' . ' ' . 'YYYY')
             ->setPageTitle('detail', 'Image')
             ->setPageTitle('index', 'Caroussel')
             ->setPageTitle('edit', 'Modifier l\'image')
