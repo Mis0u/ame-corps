@@ -13,7 +13,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 
 class ConfigureCrud
 {
-    public function setTitle($crud, string $detail, string $index, string $edit, string $new, string $dateTime = 'dd MMMM YYYY')
+    public function setTitle($crud, string $detail, string $index, string $edit, string $new, string $dateTime = 'dd MMMM')
     {
         return $crud
             ->setDateTimeFormat($dateTime)
