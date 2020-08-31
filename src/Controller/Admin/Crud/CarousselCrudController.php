@@ -5,11 +5,12 @@ namespace App\Controller\Admin\Crud;
 use App\Entity\Caroussel;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Crud;
 use Vich\UploaderBundle\Form\Type\VichImageType;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Action;
 use EasyCorp\Bundle\EasyAdminBundle\Field\IdField;
+use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
+use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
-use EasyCorp\Bundle\EasyAdminBundle\Config\Action;
-use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 
 class CarousselCrudController extends AbstractCrudController
@@ -25,7 +26,7 @@ class CarousselCrudController extends AbstractCrudController
         $id = IdField::new('id')->hideOnForm();
         $imageField = ImageField::new('imageFile', 'Image')->setFormType(VichImageType::class)->setHelp("Format jpeg et png <br> Poids Max ~ 500Ko")->setRequired(true);
         $image =  ImageField::new('image', 'Image')->setBasePath("uploads/vich/carousel");
-        $date = DateTimeField::new('updatedAt', 'Ajoufté le ')->hideOnForm();
+        $date = DateField::new('updatedAt', 'Ajouté le ')->hideOnForm()->setTimezone('Europe/Paris');
 
         return CRUD::PAGE_INDEX === $pageName || CRUD::PAGE_DETAIL === $pageName ? [$id, $image, $date] : [$id, $imageField, $date];
     }
@@ -33,7 +34,7 @@ class CarousselCrudController extends AbstractCrudController
     public function configureCrud(Crud $crud): Crud
     {
         return $crud
-            ->setDateTimeFormat('dd' . ' ' . 'MMMM')
+            ->setDateFormat('dd' . ' ' . 'MMMM')
             ->setPageTitle('detail', 'Image')
             ->setPageTitle('index', 'Caroussel')
             ->setPageTitle('edit', 'Modifier l\'image')
