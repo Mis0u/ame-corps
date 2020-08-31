@@ -13,10 +13,9 @@ use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 
 class ConfigureCrud
 {
-    public function setTitle($crud, string $detail, string $index, string $edit, string $new, string $dateTime = 'dd MMMM')
+    public function setTitle($crud, string $detail, string $index, string $edit, string $new)
     {
         return $crud
-            ->setDateTimeFormat($dateTime)
             ->setPageTitle('detail', $detail)
             ->setPageTitle('index', $index)
             ->setPageTitle('edit', $edit)
