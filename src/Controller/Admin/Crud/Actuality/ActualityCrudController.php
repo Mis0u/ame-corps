@@ -32,7 +32,7 @@ class ActualityCrudController extends AbstractCrudController
     {
         $id = IdField::new('id')->hideOnForm();
         $title = TextField::new('title', 'Titre');
-        $imageField = ImageField::new('imageFile', 'Image')->setFormType(VichImageType::class,)->setHelp("Format jpg et png <br> Poids Max ~ 500Ko");
+        $imageField = ImageField::new('imageFile', 'Image')->setFormType(VichImageType::class,)->setHelp("Format jpg et png <br> Poids Max ~ 500Ko")->setFormTypeOptions(['delete_label' => false]);
         $image = ImageField::new('image', 'Image')->setBasePath("uploads/vich/actuality");
         $content = TextEditorField::new('content', 'Contenu')->setFormType(CKEditorType::class);
         $date = DateTimeField::new('createdAt', 'Créé le ')->hideOnForm();
