@@ -34,8 +34,7 @@ class CarousselCrudController extends AbstractCrudController
     public function configureCrud(Crud $crud): Crud
     {
         return $crud
-            ->setDateFormat('dd' . ' ' . 'MMMM')
-            ->setTimezone('Europe/Paris')
+            ->setDateFormat('dd' . ' ' . 'MMMM' . 'YYYY')
             ->setPageTitle('detail', 'Image')
             ->setPageTitle('index', 'Caroussel')
             ->setPageTitle('edit', 'Modifier l\'image')
