@@ -108,7 +108,7 @@
     ],
     "compile": [
       "php bin/console doctrine:migrations:migrate --no-interaction",
-      "php bin/console doctrine:query:sql 'INSERT INTO `user` (`id`, `username`, `roles`, `password`) VALUES (NULL, 'admin', '[\"ROLE_ADMIN\"]', '$argon2id$v=19$m=65536,t=4,p=1$akJ0ZnQwTkV1ODNMZVR0NQ$HwxCz8xVgh3rwCQBnJrG15Y4Gsc+wnPh7/mJcg0CQ10')'"
+      "php bin/console doctrine:query:sql 'INSERT INTO `user` (`id`, `username`, `roles`, `password`) VALUES (NULL, 'admin', [\"ROLE_ADMIN\"]', $argon2id$v=19$m=65536,t=4,p=1$akJ0ZnQwTkV1ODNMZVR0NQ$HwxCz8xVgh3rwCQBnJrG15Y4Gsc+wnPh7/mJcg0CQ10)'"
     ]
   },
   "conflict": {
