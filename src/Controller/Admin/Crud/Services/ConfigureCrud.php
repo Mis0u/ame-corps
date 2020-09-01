@@ -16,7 +16,7 @@ class ConfigureCrud
     public function setTitle($crud, string $detail, string $index, string $edit, string $new)
     {
         return $crud
-            ->setDateFormat('dd' . ' ' . 'MMMM' . 'YYYY')
+            ->setDateFormat('dd' . ' ' . 'MMMM' . ' ' . 'YYYY')
             ->setPageTitle('detail', $detail)
             ->setPageTitle('index', $index)
             ->setPageTitle('edit', $edit)

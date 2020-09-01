@@ -24,7 +24,7 @@ class CarousselCrudController extends AbstractCrudController
     {
 
         $id = IdField::new('id')->hideOnForm();
-        $imageField = ImageField::new('imageFile', 'Image')->setFormType(VichImageType::class)->setHelp("Format jpeg et png <br> Poids Max ~ 500Ko")->setRequired(true);
+        $imageField = ImageField::new('imageFile', 'Image')->setFormType(VichImageType::class)->setHelp("Format jpeg et png <br> Poids Max ~ 500Ko")->setRequired(true)->setFormTypeOptions(['allow_delete' => false]);;
         $image =  ImageField::new('image', 'Image')->setBasePath("uploads/vich/carousel");
         $date = DateField::new('updatedAt', 'Ajouté le ')->hideOnForm();
 
