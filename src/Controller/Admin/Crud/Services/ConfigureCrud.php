@@ -15,7 +15,10 @@ class ConfigureCrud
 {
     public function setTitle($crud, string $detail, string $index, string $edit, string $new)
     {
+        \Locale::setDefault('fr');
+
         return $crud
+            ->setDateFormat('dd' . ' ' . 'MMMM')
             ->setPageTitle('detail', $detail)
             ->setPageTitle('index', $index)
             ->setPageTitle('edit', $edit)

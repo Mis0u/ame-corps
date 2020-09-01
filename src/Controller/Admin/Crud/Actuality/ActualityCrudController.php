@@ -12,11 +12,12 @@ use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\ImageField;
 use App\Controller\Admin\Crud\Services\ListConstTitle;
-use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use App\Controller\Admin\Crud\Helper\CrudConstructorTrait;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\AssociationField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
+
 
 class ActualityCrudController extends AbstractCrudController
 {
@@ -32,10 +33,10 @@ class ActualityCrudController extends AbstractCrudController
     {
         $id = IdField::new('id')->hideOnForm();
         $title = TextField::new('title', 'Titre');
-        $imageField = ImageField::new('imageFile', 'Image')->setFormType(VichImageType::class,)->setHelp("Format jpg et png <br> Poids Max ~ 500Ko")->setFormTypeOptions(['delete_label' => false]);
+        $imageField = ImageField::new('imageFile', 'Image')->setFormType(VichImageType::class,)->setHelp("Format jpg et png <br> Poids Max ~ 500Ko")->setFormTypeOptions(['allow_delete' => false]);
         $image = ImageField::new('image', 'Image')->setBasePath("uploads/vich/actuality");
         $content = TextEditorField::new('content', 'Contenu')->setFormType(CKEditorType::class);
-        $date = DateTimeField::new('createdAt', 'Créé le ')->hideOnForm();
+        $date = DateField::new('createdAt', 'Créé le ')->hideOnForm();
         $association = AssociationField::new('actualityComments', 'Commentaires')->hideOnForm();
 
         if (CRUD::PAGE_INDEX === $pageName || CRUD::PAGE_DETAIL === $pageName) {
