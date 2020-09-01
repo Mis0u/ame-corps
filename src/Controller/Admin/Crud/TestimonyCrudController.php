@@ -10,7 +10,7 @@ use EasyCorp\Bundle\EasyAdminBundle\Config\Actions;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextField;
 use EasyCorp\Bundle\EasyAdminBundle\Field\EmailField;
 use App\Controller\Admin\Crud\Services\ListConstTitle;
-use EasyCorp\Bundle\EasyAdminBundle\Field\DateTimeField;
+use EasyCorp\Bundle\EasyAdminBundle\Field\DateField;
 use App\Controller\Admin\Crud\Helper\CrudConstructorTrait;
 use EasyCorp\Bundle\EasyAdminBundle\Field\TextEditorField;
 use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
@@ -30,8 +30,8 @@ class TestimonyCrudController extends AbstractCrudController
         return [
             EmailField::new('email'),
             TextField::new('name', 'Nom'),
-            TextEditorField::new('content', 'Contenu du commentaire')->setFormType(CKEditorType::class)->setFormTypeOptions(['config' => ['toolbar' => 'full']]),
-            DateTimeField::new('createdAt', 'Créé le ')->hideOnForm(),
+            TextEditorField::new('content', 'Contenu du commentaire')->setFormType(CKEditorType::class),
+            DateField::new('createdAt', 'Créé le ')->hideOnForm(),
         ];
     }
 
