@@ -1,4 +1,7 @@
 {
+    "aws/aws-sdk-php": {
+        "version": "3.152.0"
+    },
     "clue/stream-filter": {
         "version": "v1.4.1"
     },
@@ -182,6 +185,9 @@
     },
     "monolog/monolog": {
         "version": "2.1.1"
+    },
+    "mtdowling/jmespath.php": {
+        "version": "2.6.0"
     },
     "nikic/php-parser": {
         "version": "v4.8.0"
