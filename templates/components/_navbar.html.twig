@@ -8,27 +8,27 @@
   <div class="collapse navbar-collapse" id="navbarColor03" data-hover="dropdown">
     <ul class="navbar-nav justify-content-end w-100">
       <li class="nav-item  {{ addClass( route,'app_home' ) }} ">
-        <a class="nav-link" href="{{path('app_home')}}">Accueil <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{{path('app_home')}}">{% trans %}Accueil{% endtrans %}</a>
       </li>
       <li class="nav-item {{ addClass( route,'app_actualities' ) }}">
-        <a class="nav-link" href="{{path('app_actualities')}}">Actualités</a>
+        <a class="nav-link" href="{{path('app_actualities')}}">{% trans %}Actualités{% endtrans %}</a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle not-active" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sensitiv "votre produit"</a>
         <div class="dropdown-menu" style="position: absolute; transform: translate3d(0px, 40px, 0px); top: 0px; left: 0px; will-change: transform;" x-placement="bottom-start">
-            <a class="dropdown-item not-active" href="{{path('app_definition')}}">Définition</a>
-            <a class="dropdown-item not-active" href="{{path('app_operation')}}">Déroulement d'une séance</a>
-            <a class="dropdown-item not-active" href="{{path('app_well_done')}}">Bienfaits</a>
+            <a class="dropdown-item not-active" href="{{path('app_definition')}}">{% trans %}Définition{% endtrans %}</a>
+            <a class="dropdown-item not-active" href="{{path('app_operation')}}">{% trans %}Déroulement d'une séance{% endtrans %}</a>
+            <a class="dropdown-item not-active" href="{{path('app_well_done')}}">{% trans %}Bienfaits{% endtrans %}</a>
         </div>
       </li>
       <li class="nav-item {{ addClass( route,'app_price' ) }}">
-        <a class="nav-link" href="{{path('app_price')}}">Horaires et tarifs</a>
+        <a class="nav-link" href="{{path('app_price')}}">{% trans %}Horaires et tarifs{% endtrans %}</a>
       </li>
       <li class="nav-item {{ addClass( route,'app_testimony' ) }}">
-        <a class="nav-link" href="{{path('app_testimony')}}">Témoignages</a>
+        <a class="nav-link" href="{{path('app_testimony')}}">{% trans %}Témoignages{% endtrans %}</a>
       </li>
       <li class="nav-item {{ addClass( route,'app_ethic' ) }}">
-        <a class="nav-link" href="{{path('app_ethic')}}">Éthique</a>
+        <a class="nav-link" href="{{path('app_ethic')}}">{% trans %}Éthiques{% endtrans %}</a>
       </li>
       <li class="nav-item {{ addClass( route,'app_contact' ) }}">
         <a class="nav-link" href="{{path('app_contact')}}">Contact</a>

@@ -23,7 +23,7 @@ class ArticleController extends AbstractController
     }
 
     /**
-     * @Route("/deroulement", name="app_operation")
+     * @Route({"fr": "/deroulement", "en": "/course"}, name="app_operation")
      */
     public function operation(OperationRepository $repo)
     {
@@ -35,7 +35,7 @@ class ArticleController extends AbstractController
     }
 
     /**
-     * @Route("/bien-faits", name="app_well_done")
+     * @Route({"fr": "/bien-faits", "en": "/benefits"}, name="app_well_done")
      */
     public function wellDone(WellDoneRepository $repo)
     {

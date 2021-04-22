@@ -15,7 +15,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class ActualityController extends AbstractController
 {
     /**
-     * @Route("/actualites", name="app_actualities")
+     * @Route({"fr": "/actualites", "en": "/actualities"}, name="app_actualities")
      */
     public function showAll(ActualityRepository $repo)
     {

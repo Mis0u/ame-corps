@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="UzFhc1Y" resname="Accueil">
+        <source>Accueil</source>
+        <target>Home</target>
+      </trans-unit>
+      <trans-unit id="2iiN0qP" resname="Actualités">
+        <source>Actualités</source>
+        <target>Actualities</target>
+      </trans-unit>
+      <trans-unit id="4gn4tGn" resname="Définition">
+        <source>Définition</source>
+        <target>Definition</target>
+      </trans-unit>
+      <trans-unit id="8uMjYET" resname="Déroulement d'une séance">
+        <source>Déroulement d'une séance</source>
+        <target>Course of a session</target>
+      </trans-unit>
+      <trans-unit id="xmhUTcO" resname="Bienfaits">
+        <source>Bienfaits</source>
+        <target>Benefits</target>
+      </trans-unit>
+      <trans-unit id="QVzTkJi" resname="Horaires et tarifs">
+        <source>Horaires et tarifs</source>
+        <target>Timetables and prices</target>
+      </trans-unit>
+      <trans-unit id="MUGK5iV" resname="Témoignages">
+        <source>Témoignages</source>
+        <target>Testymonies</target>
+      </trans-unit>
+      <trans-unit id="jHycisW" resname="Éthiques">
+        <source>Éthiques</source>
+        <target>Ethics</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

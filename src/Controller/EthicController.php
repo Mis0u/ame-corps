@@ -9,7 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class EthicController extends AbstractController
 {
     /**
-     * @Route("/ethique", name="app_ethic")
+     * @Route({"fr": "/ethique", "en": "/ethic"}, name="app_ethic")
      */
     public function index(EthicRepository $repo)
     {

@@ -9,7 +9,9 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 class PriceController extends AbstractController
 {
     /**
-     * @Route("/horaires-tarifs", name="app_price")
+     * @Route({"fr": "/horaires-prix", "en": "/timestable-price"},
+     *  name="app_price"
+     * )
      */
     public function index(PriceRepository $repo)
     {
